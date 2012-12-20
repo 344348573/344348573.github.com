@@ -1,0 +1,14 @@
+/* CSS Document */
+
+
+#main{ width:900px; margin:0 auto;}
+#me{ border-bottom:dashed #999999 1px; height:100px; }
+#name{ margin-top:30px; float:left;}
+#me h1{ display:inline; padding:10px; margin:20px; font-weight:800;}
+#me h6{ display:inline; color:#999999;}
+#me ul{ display:inline; float:right; margin-top:40px;}
+#me ul li{ display:inline; padding:10px; margin-right:20px;}
+#me ul li a{ color:#666666; text-decoration:none; font-weight:500;}
+img{ width:800px; float:left; margin:50px 0px 0px 50px; padding-bottom:50px; border-bottom:dashed #999999 1px;}
+#copyright{ margin:0px auto; width:200px; height:50px; clear:both;}
+#copyright p{ padding:30px 20px; font-size:14px; color:#999999;}
