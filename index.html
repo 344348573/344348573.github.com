@@ -3,18 +3,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>嘘~~别说太细！</title>
-
+<script language="javascript" src="http://f2e.it/jq.js">
+</script>
 <style>
 #content{ width:500px; height:400px; margin:0px auto;}
-
+#hehe{ background-color:#F3F3F3; margin:auto; min-width:auto; white-space:nowrap;padding:3px;color:#E4E4E4; text-align:center;}
 
 </style>
-
+<script type="text/javascript">
+$().ready(function(){
+	$("#hehe a").toggle(
+		$(this).anminate({
+    		opacity: 0.1,marginTop:"3px"
+  			},500),
+	$(this).anminate({
+    		opacity: 1,marginTop:"3px"
+  			},500)
+  )});
+</script>
 </head>
 
 <body>
 <div id="content">
-<div>呵呵</div>
+<div id="hehe"><a>其实不是你眼睛的问题</a></div>
 嘘~~别说太细！
 
 </div>
