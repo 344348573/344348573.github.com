@@ -12,3 +12,4 @@
 img{ width:800px; float:left; margin:50px 0px 0px 50px; padding-bottom:50px; border-bottom:dashed #999999 1px;}
 #copyright{ margin:0px auto; width:200px; height:50px; clear:both;}
 #copyright p{ padding:30px 20px; font-size:14px; color:#999999;}
+.alertBox{width:300px;height:200px;margin:50% 50%}
