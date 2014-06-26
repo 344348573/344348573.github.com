@@ -1,37 +1,86 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>嘘~~别说太细！</title>
-<script language="javascript" src="http://f2e.it/jq.js">
-</script>
-<style>
-#content{ width:500px; height:400px; margin:0px auto;}
-#hehe{ background-color:#F3F3F3; margin:auto; min-width:auto; white-space:nowrap;padding:3px;color:#E4E4E4; text-align:center;}
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>嘘~~别说太细！</title>
+	<script language="javascript" src="http://f2e.it/jq.js"></script>
+	<style>
+	
+		.test{width:200px;height:500px;display:block;background:#333;margin:10px auto;}
+		.cardf {
+				animation: card 0.6s;
+				-moz-animation: card 0.6s; /* Firefox */
+				-webkit-animation: card 0.6s; /* Safari and Chrome */
+				-o-animation: card 0.6s; /* Opera */
+			}
+		@keyframes card
+			{
+			from {
+				transform: rotateY(0deg)
+			}
+			to {
+				transform: rotateY(90deg)
+			}
+			}
 
-</style>
-<script type="text/javascript">
-$().ready(function(){
-	$("#hehe a").toggle(
-		$(this).anminate({
-    		opacity: 0.1,marginTop:"3px"
-  			},500),
-	$(this).anminate({
-    		opacity: 1,marginTop:"3px"
-  			},500)
-  )});
-</script>
+			@-moz-keyframes
+			card {from {
+				-moz-transform: rotateY(0deg)
+			}
+			to {
+				-moz-transform: rotateY(90deg)
+			}
+			}
+
+			@-webkit-keyframes
+			card {from {
+				-webkit-transform: rotateY(0deg)
+			}
+			to {
+				-webkit-transform: rotateY(90deg)
+			}
+			}
+			@-o-keyframes
+			card {from {
+				-o-transform: rotateY(0deg)
+			}
+			to {
+				-o-transform: rotateY(90deg)
+			}
+			}
+		
+	</style>
 </head>
 
 <body>
-<div id="content">
+	<div id="content">
+			<!--页头-->
+			<div id="head">
+				<div class="container">
+					<div>
+					
+					</div>
+					
 
-<div id="hehe"><a>其实不是你眼睛的问题</a></div>
+				</div>
+			</div>
+			<!-- /页头 -->
+			<!-- 主体 -->
+			<div class="page">
+				<div class="container">
+					<div class="test cardf"></div>
 
-嘘~~别说太细！
-
-</div>
-
+				</div>
+			</div>
+			<!-- /主体 -->
+			<!-- 页底 -->
+			<div id="foot">
+				
+			</div>
+			<!-- /页底 -->
+		</div>
 
 </body>
 </html>
+
+
