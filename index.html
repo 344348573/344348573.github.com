@@ -120,45 +120,12 @@
 
 		</script>
 
-		<script>
-			$(function() {
-				$('#vip1').height(50);
-				$('#vip1').click(function() {
-					if ($('#vip').is(':hidden')) {
-						$('#vip').show();
-						$('#vip1').height('100%');
-					} else {
-						$('#vip').hide();
-						$('#vip1').height('50');
-					}
-				});
-				$('#vip2').height(50);
-				$('#vip2').click(function() {
-					if ($('#vip-2').is(':hidden')) {
-						$('#vip-2').show();
-						$('#vip2').height('100%');
-					} else {
-						$('#vip-2').hide();
-						$('#vip2').height('50');
-					}
-				});
-				$('#vip3').height(50);
-				$('#vip3').click(function() {
-					if ($('#vip-3').is(':hidden')) {
-						$('#vip-3').show();
-						$('#vip3').height('100%');
-					} else {
-						$('#vip-3').hide();
-						$('#vip3').height('50');
-					}
-				});
-			});
-		</script>
+		
 	</head>
 	<body id="page_card" style="">
 		<div id="mappContainer">
 			<div class="inner root" style="">
-				
+				<div class="carddiv">
 					<div id="card" class="card" style="background: url(&quot;http://wx.x.kcdns.net/kcData/upload/img/1403513060.png&quot;) no-repeat scroll 0px 0px / 267px 159px transparent; display: none;">
 						<img src="%E4%BC%9A%E5%91%98%E5%8D%A1_files/1403513622.png" class="logo">
 						<h1 style="color:#171C61;text-shadow:0 1px #e2ded2;">联合货币会员卡</h1>
@@ -181,75 +148,12 @@
 						</div>
 
 					</div>
-				
+				</div>
 				<p>
 					<span data-hidden-when-lost="使用时向服务员出示此卡">使用时请出示此卡</span>
 				</p>
 
-				<ul class="round" style="display:block">
-					<li class="intro" style="display: block; height: 50px;" id="vip1">
-						<div style="width:60px;float:left">
-							<img src="%E4%BC%9A%E5%91%98%E5%8D%A1_files/power1.png" width="50">
-						</div>
-						<div style="float:leftwidth:460px;">
-							联合货币白金会员							<br>
-							到期时间：
-							2016/06/01								
-						</div>
-						<div style="clear:both;background:rgb(230, 230, 230);font-size:12px;display:none;padding:5px;" id="vip">
-							<p>
-	( 联合货币白金会员卡使用规则 )
-</p>
-<p>
-	<br>
-</p>						</div>
-					</li>
-					<!-- 自定义链接在预存余额下面显示 -->
-				</ul>
-				<ul class="round" style="display:block">
-					<li style="height:50px;" class="intro" id="vip2">
-						<div style="width:60px;float:left">
-							<img src="%E4%BC%9A%E5%91%98%E5%8D%A1_files/power2.png" width="50">
-						</div>
-						<div style="float:left;">
-							100元代金卡							<br>
-							到期时间：
-							2016/06/01								
-						</div>
-						<div style="clear:both;background:rgb(230, 230, 230);font-size:12px;display:none;padding:5px;" id="vip-2">
-							<p>
-								在此说明券的使用方式，如最低消费金额，优惠券打折信息，不与其他优惠同时使用、节假日不可使用等。							</p>
-						</div>
-					</li>
-				</ul>
-				<ul class="round" style="display:block">
-					<li style="height:50px;" class="intro" id="vip3">
-						<div style="width:60px;float:left">
-							<img src="%E4%BC%9A%E5%91%98%E5%8D%A1_files/power3.png" width="50">
-						</div>
-						<div style="float:left;">
-							货币礼品券							<br>
-							到期时间：
-							2015/01/01														</div>
-						<div style="clear:both;background:rgb(230, 230, 230);font-size:12px;display:none;padding:5px;" id="vip-3">
-							<p>
-								(&nbsp;货币礼品券使用规则 )							</p>
-						</div>
-					</li>
-
-					<!-- 自定义链接在预存余额下面显示 -->
-				</ul>
-				<ul class="round" style="display:block;clear:both;margin-bottom: 0px;">
-					<li class="intro" style="">
-						<a href="http://www.wx.vm/index.php?g=Wap&amp;m=Lhhb&amp;a=expend&amp;token=wpjduc1403076368&amp;wecha_id=1111123312">我的消费记录</a>
-					</li>
-					<li class="intro" style="">
-						<a href="http://www.wx.vm/index.php?g=Wap&amp;m=Lhhb&amp;a=info&amp;token=wpjduc1403076368&amp;wecha_id=1111123312">会员卡说明</a>
-					</li>
-					<li class="applicable" style="">
-						<a href="http://www.wx.vm/index.php?g=Wap&amp;m=Lhhb&amp;a=addr&amp;token=wpjduc1403076368&amp;wecha_id=1111123312">门店电话及地址</a>
-					</li>
-				</ul>
+				
 			</div>
 			<div class="footFix" id="modal"></div>
 		</div>
