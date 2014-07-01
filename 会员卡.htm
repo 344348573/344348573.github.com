@@ -23,13 +23,18 @@
 				-webkit-animation: card1 0.6s; /* Safari and Chrome */
 				-o-animation: card1 0.6s; /* Opera */
 			}
+			
+			
+			
 			@keyframes card
 			{
 			from {
 				transform: rotateY(0deg)
 			}
 			to {
-				transform: rotateY(90deg)
+				transform: rotateY(90deg);
+				opacity:0;
+				
 			}
 			}
 
@@ -38,7 +43,8 @@
 				-moz-transform: rotateY(0deg)
 			}
 			to {
-				-moz-transform: rotateY(90deg)
+				-moz-transform: rotateY(90deg);
+				opacity:0
 			}
 			}
 
@@ -47,7 +53,8 @@
 				-webkit-transform: rotateY(0deg)
 			}
 			to {
-				-webkit-transform: rotateY(90deg)
+				-webkit-transform: rotateY(90deg);
+				opacity:0
 			}
 			}
 			@-o-keyframes
@@ -55,7 +62,8 @@
 				-o-transform: rotateY(0deg)
 			}
 			to {
-				-o-transform: rotateY(90deg)
+				-o-transform: rotateY(90deg);
+				opacity:0
 			}
 			}
 
@@ -64,25 +72,25 @@
 				transform: rotateY(90deg)
 			}
 			to {
-				transform: rotateY(180deg)
+				transform: rotateY(0deg)
 			}
 			}
 
 			@-moz-keyframes
 			card1 {from {
-				-moz-transform: rotateY(270deg)
+				-moz-transform: rotateY(90deg)
 			}
 			to {
-				-moz-transform: rotateY(360deg)
+				-moz-transform: rotateY(0deg)
 			}
 			}
 
 			@-webkit-keyframes
 			card1 {from {
-				-webkit-transform: rotateY(270deg)
+				-webkit-transform: rotateY(90deg)
 			}
 			to {
-				-webkit-transform: rotateY(360deg)
+				-webkit-transform: rotateY(0deg)
 			}
 			}
 
@@ -106,18 +114,18 @@
 						setTimeout(function() {
 							$("#card").removeClass("cardf").hide(0);
 							$("#card2").removeClass("cardf").addClass("card1").show(0);
-						}, 600);
+						}, 3500);
 					} else {
 						$("#card2").removeClass("card1").addClass("cardf")
 						setTimeout(function() {
 							$("#card2").removeClass("cardf").hide(0);
 							$("#card").removeClass("cardf").addClass("card1").show(0);
-						}, 600);
+						}, 3500);
 					}
 
 				});
 			});
-
+			
 		</script>
 
 		
