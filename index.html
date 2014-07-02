@@ -699,7 +699,7 @@
 				
 					var ws = $(window).innerWidth();
 
-					var padding = ($("li.j_step").css("padding").split("px"))[0];
+					var padding = ($("li.j_step").css("padding-left").split("px"))[0];
 					var size = ws - padding * 2;
 					$(".j_step").width(size);
 					$("ul.content").height($("li.j_step").eq(0).outerHeight(true))
