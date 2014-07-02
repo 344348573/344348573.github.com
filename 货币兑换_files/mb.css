@@ -190,7 +190,7 @@ div:after {content:""; display: block; height: 0; clear: both; visibility: hidde
 
 li.img img{width:100%;}
 ul.content{clear:none;overflow:hidden;padding:0}
-li.j_step{float:left;display:inline;overflow:hidden;padding:1.1em}
+li.j_step{float:left;display:inline;overflow:hidden;padding:17px}
 .btnsub.m10{width:100%}
 /* 百度地图 */
 #bd_map{width:100%;display:none;border:0px;margin-top:0.3em}
