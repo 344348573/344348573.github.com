@@ -50,15 +50,15 @@ div:after {content:""; display: block; height: 0; clear: both; visibility: hidde
 
 /****内容区域*****/
 
-.result{width:96%;margin:0 auto;height:1.6em; border:1px solid #e8e8e8;border-radius:3px; text-align:right; display:block;color:#535c67; font-size:1.4em;padding-right:10px;}
-.selected{margin:10px 0;clear:both;height:2.8em;}
+.result{width:100%;margin:0 auto;height:1.6em; border:1px solid #e8e8e8;border-radius:3px; text-align:right; display:block;color:#535c67; font-size:1.4em;}
+.selected{margin:17px 0;clear:both;height:2.8em;}
 .selected .float{ float:left;display:block; }
 .selected .sel{width:40%;height:2.8em; font-size:1em;position:relative;}
 .selected .select{ display:none;}
 .selected .dui{ width:20%; text-align:center;height:2.8em;}
-.selected .dui img{vertical-align:middle; display:block;margin:0 auto;}
+.selected .dui img{vertical-align:middle; display:block;margin:0 auto;height: 1.4em;padding-top: 0.7em;}
 
-
+#cal_m2,#cal_m1{height:100%;width:100%;text-indent: 0.5em;font-size: 1em;}
 .selected .value{ display:block; float:left;width:70%; background:#c6c6c6;color:#fff; height:2.8em;text-align:center; line-height:2.8em; border-top-left-radius:5px; border-bottom-left-radius:5px;}
 .selected .downico{ display:block; width:30%; float:right; overflow:hidden; background:#adadad;height:2.8em; text-align:center; border-top-right-radius:5px; border-bottom-right-radius:5px;}
 .selected .downico img{margin-top:53%;}
@@ -93,9 +93,9 @@ div:after {content:""; display: block; height: 0; clear: both; visibility: hidde
 .select_dot{ border:1px solid #e8e8e8; border-radius:5px;}
 .city{ overflow:hidden; border-bottom:1px solid #e8e8e8;}
 .selc span{ display:block; float:left; height:2em;line-height:2.4em; overflow:hidden;}
-.selc .select_name{width:28%;color:#535c67; font-size:0.8em; text-align:center;}
-.selc .select_cont{ width:72%; font-size:0.6em;color:#b8b8b8;line-height:2.5em;}
-.selc .select_cont select{width:100%; height:2em; border:0px;}
+.selc .select_name{width:28%;color:#535c67; font-size:0.8em; text-align:center;height:2.5em;}
+.selc .select_cont{ width:72%; font-size:0.6em;color:#b8b8b8;height:2.5em;}
+.selc .select_cont select{width:100%; height:100%; border:0px;line-height:2.5em;}
 .selc .select_right{ width:5%; text-align:left;}
 .selc .select_right img{ display:block; margin-top:55%;}
 
@@ -115,7 +115,7 @@ div:after {content:""; display: block; height: 0; clear: both; visibility: hidde
 .scont .perinfo td{ height:2.2em; overflow:hidden;border-collapse: separate; border-bottom:1px solid #e8e8e8;}
 .scont .perinfo .left{width:30%; text-align:center; color:#535c67; font-size:1.1em;}
 .scont .perinfo .right{width:70%; text-indent:1em;}
-.scont .perinfo .right input{ width:95%; height:90%; float:left;color:#b8b8b8; font-size:0.9em; border:0px; text-indent:0.5em;}
+.scont .perinfo .right input{ width:95%; height:90%; float:left;color:#b8b8b8; font-size:0.9em; border:0px; text-indent:1.4em;}
 .scont .ps{margin-bottom:1em;}
 
 .stp4title{ display:block; text-align:center; color:#535c67; font-weight:normal; font-size:1.2em; line-height:2em;}
@@ -124,10 +124,10 @@ div:after {content:""; display: block; height: 0; clear: both; visibility: hidde
 
 .step5 .end{ background:#fff4dd;border-bottom:1px solid #ffad00;overflow:hidden;padding:1.1em;}
 .step5 .end .end_info{ border:1px solid #ffad00; overflow:hidden;padding:0.8em;border-radius:5px;}
-.step5 .end .end_info .end_title{width:90%;overflow:hidden;margin:0 auto; background:#ffad00;border-radius:5px; height:2.6em;margin-bottom:0.5em;}
+.step5 .end .end_info .end_title{width:95%;overflow:hidden;margin:0 auto; background:#ffad00;border-radius:5px; height:2.6em;margin-bottom:0.5em;}
 .step5 .end .end_info .end_title span{ display:block; float:left; overflow:hidden;}
-.step5 .end .end_info .end_title .pic{width:20%; text-align:center;padding-left:1%;}
-.step5 .end .end_info .end_title .pic img{margin-top:6%;}
+.step5 .end .end_info .end_title .pic{text-align:center;padding:1% 0 0 1%;height: 90%;}
+.step5 .end .end_info .end_title .pic img{height:100%}
 .step5 .end .end_info .end_title .name{width:78%;text-indent:0.2em; font-size:1.1em;line-height:2.6em;color:#fff;}
 .step5 .end .end_info .end_alert{ overflow:hidden;color:#535c67;line-height:1.6em;}
 
@@ -138,8 +138,8 @@ div:after {content:""; display: block; height: 0; clear: both; visibility: hidde
 .sub{padding:1em;}
 .ordersinfo .ordertable{ overflow:hidden; width:100%; border:0px;}
 .ordersinfo .ordertable td{ height:2em; border-bottom:1px solid #e3e3e3;padding:0.5em 0.8em;}
-.ordersinfo .ordertable .left{ width:30%;color:#535c67;}
-.ordersinfo .ordertable .right{width:70%;color:#b8b8b8;}
+.ordersinfo .ordertable .left{ width:33%;color:#535c67;}
+.ordersinfo .ordertable .right{width:67%;color:#b8b8b8;}
 
 .myorder{padding:0.5em;}
 .myorder .ordertable{ border:1px solid #e3e3e3; border-radius:5px; margin-bottom:1em;}
@@ -177,18 +177,22 @@ div:after {content:""; display: block; height: 0; clear: both; visibility: hidde
 .europe .stp .actions .operationImg .img .close{ position:absolute;display:block;top:0px;right:0px;width:20%; height:20%;}
 .europe .stp .actions .operationImg .noimg a{ display:block;width:100%; height:100%; text-align:center; line-height:2.52em;font-size:1.6em; color:#bcbcbc;}
 
-.europe .stp .piaoju{background:#bcbcbc;}
+.europe .stp .piaoju{background:#bcbcbc;height:2em;padding-top: 5%;}
 .europe .stp .piaoju .cbx{ float:left; display:inline;overflow:hidden;}
-.europe .stp .piaoju .cbx .img{display:block;float:left;margin:0.2em 0 0 0.2em; text-align:center;}
-.europe .stp .piaoju .cbx .title{ font-size:0.5em;color:#fff;overflow:hidden; float:left; height:2em; line-height:2.6em;}
-.europe .stp .piaoju .chk{width:60%;}
-.europe .stp .piaoju .chk .img{width:15%;height:2em; text-align:center;padding-top:1%; }
-.europe .stp .piaoju .unchk{width:40%;}
-.europe .stp .piaoju .unchk .img{width:16%;}
-.europe .stp .piaoju .unchk .title{text-indent:1em;}
+.europe .stp .piaoju .img{display:block;float:left;text-align:center;height:50%;margin-left: 2%;margin-top: 1%;}
+.europe .stp .piaoju .img img{height:100%}
+.europe .stp .piaoju .cbx .title{ font-size:0.6em;color:#fff;overflow:hidden; float:left;height: 1.6em;line-height: 1.6em;}
+.europe .stp .piaoju .chk{width:62%;height:100%}
+.europe .stp .piaoju .unchk{width:38%;height:100%}
+
+.europe .stp .piaoju .unchk .img{margin-left:2%}
+.europe .stp .piaoju .unchk .title{text-indent:.5em;}
 
 li.img img{width:100%;}
-ul.content{clear:none;overflow:hidden;padding:0}
-li.j_step{float:left;display:inline;overflow:hidden;padding:1.1em}
+ul.content{clear:none;overflow:hidden;padding:0;width:99999px}
+li.j_step{float:left;display:inline;overflow:hidden;padding:11px}
 .btnsub.m10{width:100%}
-
+/* 百度地图 */
+#bd_map{width:100%;border:0px;margin-top:0.3em;}
+.steps{width:100%;overflow:hidden}
+.moxie-shim {top: 0 !important;}
