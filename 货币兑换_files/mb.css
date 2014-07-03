@@ -50,15 +50,15 @@ div:after {content:""; display: block; height: 0; clear: both; visibility: hidde
 
 /****内容区域*****/
 
-.result{width:96%;margin:0 auto;height:1.6em; border:1px solid #e8e8e8;border-radius:3px; text-align:right; display:block;color:#535c67; font-size:1.4em;padding-right:10px;}
-.selected{margin:10px 0;clear:both;height:2.8em;}
+.result{width:100%;margin:0 auto;height:1.6em; border:1px solid #e8e8e8;border-radius:3px; text-align:right; display:block;color:#535c67; font-size:1.4em;}
+.selected{margin:17px 0;clear:both;height:2.8em;}
 .selected .float{ float:left;display:block; }
 .selected .sel{width:40%;height:2.8em; font-size:1em;position:relative;}
 .selected .select{ display:none;}
 .selected .dui{ width:20%; text-align:center;height:2.8em;}
 .selected .dui img{vertical-align:middle; display:block;margin:0 auto;height: 1.4em;padding-top: 0.7em;}
 
-#cal_m2,#cal_m1{height:100%;width:100%}
+#cal_m2,#cal_m1{height:100%;width:100%;text-indent: 0.5em;font-size: 1em;}
 .selected .value{ display:block; float:left;width:70%; background:#c6c6c6;color:#fff; height:2.8em;text-align:center; line-height:2.8em; border-top-left-radius:5px; border-bottom-left-radius:5px;}
 .selected .downico{ display:block; width:30%; float:right; overflow:hidden; background:#adadad;height:2.8em; text-align:center; border-top-right-radius:5px; border-bottom-right-radius:5px;}
 .selected .downico img{margin-top:53%;}
@@ -93,9 +93,9 @@ div:after {content:""; display: block; height: 0; clear: both; visibility: hidde
 .select_dot{ border:1px solid #e8e8e8; border-radius:5px;}
 .city{ overflow:hidden; border-bottom:1px solid #e8e8e8;}
 .selc span{ display:block; float:left; height:2em;line-height:2.4em; overflow:hidden;}
-.selc .select_name{width:28%;color:#535c67; font-size:0.8em; text-align:center;}
-.selc .select_cont{ width:72%; font-size:0.6em;color:#b8b8b8;line-height:2.5em;}
-.selc .select_cont select{width:100%; height:2em; border:0px;}
+.selc .select_name{width:28%;color:#535c67; font-size:0.8em; text-align:center;height:2.5em;}
+.selc .select_cont{ width:72%; font-size:0.6em;color:#b8b8b8;height:2.5em;}
+.selc .select_cont select{width:100%; height:100%; border:0px;line-height:2.5em;}
 .selc .select_right{ width:5%; text-align:left;}
 .selc .select_right img{ display:block; margin-top:55%;}
 
@@ -189,8 +189,10 @@ div:after {content:""; display: block; height: 0; clear: both; visibility: hidde
 .europe .stp .piaoju .unchk .title{text-indent:.5em;}
 
 li.img img{width:100%;}
-ul.content{clear:none;overflow:hidden;padding:0}
-li.j_step{float:left;display:inline;overflow:hidden;padding:17px}
+ul.content{clear:none;overflow:hidden;padding:0;width:99999px}
+li.j_step{float:left;display:inline;overflow:hidden;padding:11px}
 .btnsub.m10{width:100%}
 /* 百度地图 */
-#bd_map{width:100%;display:none;border:0px;margin-top:0.3em}
+#bd_map{width:100%;border:0px;margin-top:0.3em;}
+.steps{width:100%;overflow:hidden}
+.moxie-shim {top: 0 !important;}
