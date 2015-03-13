@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="renderer" content="webkit"/>
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="微信应用，微信营销，开放平台" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="/assets/ab909b49/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/ab909b49/bootstrap/css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" href="/assets/ab909b49/css/bootstrap-yii.css" />
+<link rel="stylesheet" type="text/css" href="/assets/ab909b49/css/jquery-ui-bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="/assets/ab909b49/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" />
+<script type="text/javascript" src="/assets/af5a3b6d/jquery.js"></script>
+<script type="text/javascript" src="/assets/ab909b49/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/ab909b49/js/bootstrap-noconflict.js"></script>
+<script type="text/javascript" src="/assets/ab909b49/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="/assets/ab909b49/bootbox/bootbox.min.js"></script>
+<script type="text/javascript" src="/assets/ab909b49/notify/notify.min.js"></script>
+<title>微乐秀</title>
+<link type="text/css" rel="stylesheet" href="/themes/wlx/assets/css/init.css" />
+<link type="text/css" rel="stylesheet" href="/themes/wlx/assets/css/wlx.css" />
+<script type="text/javascript" src="/themes/wlx/assets/js/wlx.js"></script>
+<script type="text/javascript" src="/themes/wlx/assets/js/jquery.J_KCWidget_new.js"></script>
+<script type="text/javascript" src="/themes/wlx/assets/js/layer/layer.min.js"></script>
+<script>
+
+  var ajaxlok=false;
+  var message = "";
+  var action ="";
+  var message = "";
+  var stop=0;
+  var intv=null;
+//弹出登录二维码
+  var timer=null;
+  var scanCheckUrl="/user/scanlogin/listen";
+  var scanUrl="/user/scanlogin?ajax=1";
+</script></head>
+<body>
+	<div id="content indexcontent">
+		<div id="page">
+			<!--banner-->
+
+
+<div class="bgbanner c J_KCWidget" data-widget-type="Slidy" data-widget-config="{
+                'effect': 'fade',
+                'autoplay': true,
+                'triggerType':'click',
+                'interval':3,
+                'circular':true,
+                'activeTriggerCls': 'active',
+                'navCls': '.kc-nav',
+                'contentCls': '.kc-cont'}">
+                <div class="contbox">
+                    <div class="cont">
+                        <ul class="kc-cont">
+                        
+                                                        <li>
+                                <div style=" width:100%;background:url(/themes/wlx/assets/images/banner1.png) 50% 50% no-repeat #44c742;background-size: cover;"> </div>
+                            </li>
+                                                        <li>
+                                <div style=" width:100%;background:url(/themes/wlx/assets/images/banner2.png) 50% 50% no-repeat #44c742;background-size: cover;"> </div>
+                            </li>
+                                                        <li>
+                                <div style=" width:100%;background:url(/themes/wlx/assets/images/banner3.png) 50% 50% no-repeat #44c742;background-size: cover;"> </div>
+                            </li>
+                                                        
+                        </ul>
+                    </div>
+                </div>
+               
+                <ul class="kc-nav">
+                    <li class="active"></li>           
+                    <li></li>           
+                    <li></li>           
+                </ul>
+                <div class="inbanner">
+                    <div class="container">
+                        <div class="sitelogo"><img src="/themes/wlx/assets/images/wlxlogo.png"></div>
+                    </div>
+                    <div class="special-title">
+                    <span class="special-title1"><em class="banner-ani-top">玩转微应用</em></span>
+                        <span class="special-title2"><em class="banner-ani-lf">从</em><em class="banner-ani-master">微乐秀</em><em class="banner-ani-rt">开始</em></span>
+                    </div>
+                    <div class="top-search">
+                        <form action="/search" method="get">
+                            <input class="searchAppp" type="text" name="wd" placeholder="请输入要搜索的微应用名称" value=''>
+                            <input type="submit" class="btnsrh" value="">
+                        </form>
+                    </div>
+                    <div class="hotsrh">
+                    	                        <label>热门搜索：</label>
+                                                <a href='/search/%E5%A4%A7%E8%BD%AC%E7%9B%98'>大转盘</a>
+                         ,                                                 <a href='/search/%E5%88%AE%E5%88%AE%E4%B9%90'>刮刮乐</a>
+                         ,                                                 <a href='/search/%E9%A2%84%E7%BA%A6%E6%8A%A5%E5%90%8D'>预约报名</a>
+                         ,                                                 <a href='/search/%E5%9B%BE%E6%96%87%E7%AE%A1%E7%90%86'>图文管理</a>
+                         ,                                                 <a href='/search/%E5%BE%AE%E4%BF%A1%E4%BC%9A%E5%91%98%E5%8D%A1'>微信会员卡</a>
+                                                                    </div>
+                </div>
+
+            </div>
+            <script>
+            $(function(){
+                $("em.banner-ani-top").addClass("end");
+                $("em.banner-ani-lf").addClass("end");
+                $("em.banner-ani-rt").addClass("end");
+                $("em.banner-ani-master").addClass("end");
+            })
+            
+            </script>
+			<nav class="navbar navbar-default nav-wlx" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#index-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse nav-ul" id="index-navbar-collapse-1">
+    
+    <ul class="nav navbar-nav" id="yw4">
+<li class="li_status active"><a href="/">首页</a></li>
+<li class="li_status"><a href="/category/2">基础</a></li>
+<li class="li_status"><a href="/category/3">服务</a></li>
+<li class="li_status"><a href="/category/5">活动</a></li>
+<li class="li_status"><a href="/category/7">电商</a></li>
+<li class="li_status"><a href="/category/12">会员</a></li>
+<li class="li_status"><a href="/category/14">CRM</a></li>
+</ul>						
+						
+
+    
+    
+    
+    
+
+
+						
+						
+						
+						
+      <ul class="nav navbar-nav navbar-right">
+        <!--登录后-->
+        						<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">雨夜风潇<span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-login" role="menu">
+            <li><a href="/user"><i class="iconcen"></i>用户中心</a></li>
+            <li><a href="/user/logout"><i class="iconlogout"></i>退出登录</a></li>
+          </ul>
+        </li>
+		        
+        <!--登录前-->
+                    
+      </ul>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>			
+
+<div class="appcontent">
+                <div class="container">
+                    <!-- 推荐应用 -->
+	<div class="hotapp appcont">
+                        <ul class="row">
+                        	                        	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12 ">
+                                <div class="app-detail">
+                                	                                    	<a href="/product/33">
+                                                                        <img rel="tooltip" title="多功能表单" src="/uploads/products/thumb/746eeae75be386db36f5fb83c6874188.jpg" alt="多功能表单" />                                    </a>
+                                                                        	<a href="/product/33" class="apptit">多功能表单</a>
+                                                                        
+                                    <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">17人使用</span>
+                                    </div>
+                                    <div class="describe">
+                                    <p>多功能表单，自定义万能表单</p>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp" href="/product/apply/33">
+                                            <i>></i>
+                                            <span class="appname">添加应用</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                                                    	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12 ">
+                                <div class="app-detail">
+                                	                                    	<a href="/product/6">
+                                                                        <img rel="tooltip" title="自定义菜单" src="/uploads/products/thumb/c33bdf4260e48aa03bf0ab3c51c3eddf.jpg" alt="自定义菜单" />                                    </a>
+                                                                        	<a href="/product/6" class="apptit">自定义菜单</a>
+                                                                        
+                                    <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">28人使用</span>
+                                    </div>
+                                    <div class="describe">
+                                    <p>自定义菜单能够帮助公众号丰富界面，让用户更好更快地理解公众号的功能。</p>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp" href="/product/apply/6">
+                                            <i>></i>
+                                            <span class="appname">添加应用</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                                                    	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12 ">
+                                <div class="app-detail">
+                                	                                    	<a href="/product/24">
+                                                                        <img rel="tooltip" title="大转盘" src="/uploads/products/thumb/81b650903a0bda2115005b2d971e737b.jpg" alt="大转盘" />                                    </a>
+                                                                        	<a href="/product/24" class="apptit">大转盘</a>
+                                                                        
+                                    <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">13人使用</span>
+                                    </div>
+                                    <div class="describe">
+                                    <p>微乐秀针对微信互动开发的幸运大转盘模块，可为商家提供转盘抽奖服务，商家
+
+通过设置活动时间，预计参加抽奖人数，相应奖项和触发关键词，由网友在线参
+
+与抽奖，提高网友的参与度与热情。</p>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp" href="/product/apply/24">
+                                            <i>></i>
+                                            <span class="appname">添加应用</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                                                    	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12 ">
+                                <div class="app-detail">
+                                	                                    	<a href="/product/25">
+                                                                        <img rel="tooltip" title="微签到" src="/uploads/products/thumb/27c120a9197a9c8113d635712e644d2c.jpg" alt="微签到" />                                    </a>
+                                                                        	<a href="/product/25" class="apptit">微签到</a>
+                                                                        
+                                    <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">9人使用</span>
+                                    </div>
+                                    <div class="describe">
+                                    <p>微乐秀将会议签到改用手机啦!扫一扫现场的二维码，你的微信头像和昵称，就
+
+出现在大屏幕上啦！管理员在后台点击“现场签到”按钮，就能实时在浏览器中
+
+直播会议现场签到情况啦！</p>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp" href="/product/apply/25">
+                                            <i>></i>
+                                            <span class="appname">添加应用</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                                                    	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12 ">
+                                <div class="app-detail">
+                                	                                    	<a href="/product/31">
+                                                                        <img rel="tooltip" title="Hello World" src="/uploads/products/thumb/30d9c53ddeb1164b709d5b879281d82f.jpg" alt="Hello World" />                                    </a>
+                                                                        	<a href="/product/31" class="apptit">Hello World</a>
+                                                                        
+                                    <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">15人使用</span>
+                                    </div>
+                                    <div class="describe">
+                                    <p>配置一个关键词, 自动回复【Hello World!】</p>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp" href="/product/apply/31">
+                                            <i>></i>
+                                            <span class="appname">添加应用</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>	<!-- 推荐应用 -->
+
+
+                    <h2 class="apptype">新应用</h2>
+                    <!--最新-->
+	
+                    <div class="newapp appcont">
+                        <ul class="row">
+                        	                        	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12">
+                                <div class="app-detail">
+                                    <div class="cover"></div>
+                                    <img rel="tooltip" title="微邀请" src="" alt="微邀请" />									                                    	<a href="/product/34" class="apptit">微邀请</a>
+                                                                        <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">4人使用</span>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp addAppl" href="/product/apply/34">添加</a>
+                                                                                	<a class="addApp addAppr" href="/product/34">查看</a>
+	                                                                            
+                                    </div>
+                                </div>
+                            </li>
+                                                    	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12">
+                                <div class="app-detail">
+                                    <div class="cover"></div>
+                                    <img rel="tooltip" title="多功能表单" src="/uploads/products/thumb/746eeae75be386db36f5fb83c6874188.jpg" alt="多功能表单" />									                                    	<a href="/product/33" class="apptit">多功能表单</a>
+                                                                        <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">17人使用</span>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp addAppl" href="/product/apply/33">添加</a>
+                                                                                	<a class="addApp addAppr" href="/product/33">查看</a>
+	                                                                            
+                                    </div>
+                                </div>
+                            </li>
+                                                    	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12">
+                                <div class="app-detail">
+                                    <div class="cover"></div>
+                                    <img rel="tooltip" title="Hello World" src="/uploads/products/thumb/30d9c53ddeb1164b709d5b879281d82f.jpg" alt="Hello World" />									                                    	<a href="/product/31" class="apptit">Hello World</a>
+                                                                        <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">15人使用</span>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp addAppl" href="/product/apply/31">添加</a>
+                                                                                	<a class="addApp addAppr" href="/product/31">查看</a>
+	                                                                            
+                                    </div>
+                                </div>
+                            </li>
+                                                    	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12">
+                                <div class="app-detail">
+                                    <div class="cover"></div>
+                                    <img rel="tooltip" title="微乐秀应用" src="/uploads/products/thumb/907519fb3ccd786b9fd84dc38e8612b3.jpg" alt="微乐秀应用" />									                                    	<a href="/product/30" class="apptit">微乐秀应用</a>
+                                                                        <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">3人使用</span>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp addAppl" href="/product/apply/30">添加</a>
+                                                                                	<a class="addApp addAppr" href="/product/30">查看</a>
+	                                                                            
+                                    </div>
+                                </div>
+                            </li>
+                                                    	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12">
+                                <div class="app-detail">
+                                    <div class="cover"></div>
+                                    <img rel="tooltip" title="微房产" src="/uploads/products/thumb/edab8ed8633aa489506ade3d6b691383.jpg" alt="微房产" />									                                    	<a href="/product/29" class="apptit">微房产</a>
+                                                                        <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">7人使用</span>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp addAppl" href="/product/apply/29">添加</a>
+                                                                                	<a class="addApp addAppr" href="/product/29">查看</a>
+	                                                                            
+                                    </div>
+                                </div>
+                            </li>
+                                                    	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12">
+                                <div class="app-detail">
+                                    <div class="cover"></div>
+                                    <img rel="tooltip" title="微点餐" src="/uploads/products/thumb/a150e0c42f3b4e4861ef478f33177342.jpg" alt="微点餐" />									                                    	<a href="/product/28" class="apptit">微点餐</a>
+                                                                        <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">2人使用</span>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp addAppl" href="/product/apply/28">添加</a>
+                                                                                	<a class="addApp addAppr" href="/product/28">查看</a>
+	                                                                            
+                                    </div>
+                                </div>
+                            </li>
+                                                    	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12">
+                                <div class="app-detail">
+                                    <div class="cover"></div>
+                                    <img rel="tooltip" title="微管理" src="/uploads/products/thumb/151bb2a02a0551d9f3ef42d2991d69d4.jpg" alt="微管理" />									                                    	<a href="/product/27" class="apptit">微管理</a>
+                                                                        <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">6人使用</span>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp addAppl" href="/product/apply/27">添加</a>
+                                                                                	<a class="addApp addAppr" href="/product/27">查看</a>
+	                                                                            
+                                    </div>
+                                </div>
+                            </li>
+                                                    	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12">
+                                <div class="app-detail">
+                                    <div class="cover"></div>
+                                    <img rel="tooltip" title="微考试\微测评" src="/uploads/products/thumb/08fb21177c52deab5af2fe60b5186558.jpg" alt="微考试\微测评" />									                                    	<a href="/product/26" class="apptit">微考试\微测评</a>
+                                                                        <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">6人使用</span>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp addAppl" href="/product/apply/26">添加</a>
+                                                                                	<a class="addApp addAppr" href="/product/26">查看</a>
+	                                                                            
+                                    </div>
+                                </div>
+                            </li>
+                                                    	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12">
+                                <div class="app-detail">
+                                    <div class="cover"></div>
+                                    <img rel="tooltip" title="微签到" src="/uploads/products/thumb/27c120a9197a9c8113d635712e644d2c.jpg" alt="微签到" />									                                    	<a href="/product/25" class="apptit">微签到</a>
+                                                                        <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">9人使用</span>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp addAppl" href="/product/apply/25">添加</a>
+                                                                                	<a class="addApp addAppr" href="/product/25">查看</a>
+	                                                                            
+                                    </div>
+                                </div>
+                            </li>
+                                                    	                            <li class="col-lg-24 col-md-3 col-sm-4 col-xs-12">
+                                <div class="app-detail">
+                                    <div class="cover"></div>
+                                    <img rel="tooltip" title="大转盘" src="/uploads/products/thumb/81b650903a0bda2115005b2d971e737b.jpg" alt="大转盘" />									                                    	<a href="/product/24" class="apptit">大转盘</a>
+                                                                        <div class="status">
+                                        <span class="purchase">
+                                        	                                        		免费
+                                        	                                        </span>
+                                        <span class="usercount">13人使用</span>
+                                    </div>
+                                    <div class="addAppbtns">
+                                        <a class="addApp addAppl" href="/product/apply/24">添加</a>
+                                                                                	<a class="addApp addAppr" href="/product/24">查看</a>
+	                                                                            
+                                    </div>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </div>
+	<!--/最新-->
+                   
+                </div>
+            </div>
+
+
+		</div>
+	</div>
+    <footer id="footer">
+	<div class="container">
+		<div class="footcont">
+			<div class="footl">
+				<a href="#"><img src="/themes/wlx/assets/images/house.jpg">开创首页</a> <i class="vline"></i> <a href="#"><img src="/themes/wlx/assets/images/wx.jpg">微信公众号</a> <i class="vline"></i> <a href="#">免责声明</a> <i class="vline"></i> <a href="#"> 联系我们</a>
+			</div>
+			<div class="footr">
+				Copyright <i>&copy;</i>2009-2015 开创网络科技有限公司 版权所有<i class="vline"></i>鄂ICP备12006054号-2
+			</div>
+		</div>
+	</div>
+</footer><script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+jQuery('[data-toggle=popover]').popover();
+jQuery('[data-toggle=tooltip]').tooltip();
+});
+/*]]>*/
+</script>
+</body>
+</html>
