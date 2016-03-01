@@ -1,0 +1,26 @@
+/*background color */
+nav .current a,
+nav a:hover,
+#services h2,
+.serv_icon,
+.strip,
+#about,
+#portfolio h2,
+#options li a.selected,
+a.zoom,
+#contact-form p input#submit{
+background-color:#29AAE3 !important;
+}
+
+/*color */
+#home h1 span,
+#contact .sub_header h2,
+#about .sub_header h2,
+#response{
+color:#29AAE3 !important;
+}
+
+/*border*/
+.vaidate_error{
+border:1px solid #29AAE3 !important;
+}

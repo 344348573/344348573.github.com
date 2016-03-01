@@ -1,0 +1,45 @@
+nav {
+display: block;
+text-align: center;
+
+}
+
+nav ul {
+list-style: none;
+margin:0px !important;
+padding:0px !important;
+}
+nav li {
+display: inline-block;
+margin:0px 5px;
+}
+nav a {
+display: inline-block;
+color: white;
+padding: 5px 15px;
+text-decoration: none;
+line-height:47px;
+font-family: 'Roboto Condensed', sans-serif;
+}
+
+nav a:hover {
+background-image:url(../images/content_bg.png);
+background-repeat:repeat;	
+text-decoration: none;
+color: #000;
+}
+
+nav select {
+display: none;
+}
+
+nav a:active {
+background-color:#29AAE3;
+}
+
+nav .current a {
+color: #fff;
+background-image:url(../images/content_bg.png);
+background-repeat:repeat;
+}
+

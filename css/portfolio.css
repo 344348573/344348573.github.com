@@ -1,0 +1,30 @@
+.portfolio_img{
+position:relative;
+}
+
+.portfolio_link{
+display: block;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center !important;
+    top:50%;
+    width: 100%;
+}
+
+a.zoom,
+a.link_btn{
+background-color:#29aae3;
+background-image:url("../images/content_bg.png");
+background-repeat:repeat;
+background-position:center center;
+border-radius:10px 0px;
+padding:15px;
+}
+
+a.zoom{
+margin-right:10px;
+}
+
+a.link_btn{
+margin-left:10px;
+}
