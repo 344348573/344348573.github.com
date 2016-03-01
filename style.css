@@ -309,7 +309,6 @@ border-top:1px solid #282828;
 }
 #contact-form label {
 	float: left;
-	width:70px;
 	padding-top: 5px;
 	font-size:13px;
 	font-family: 'Open Sans', sans-serif;
@@ -340,6 +339,6 @@ text-align:center!important;
 .sub_header h3{
 margin: 0 auto 30px;
 max-width: 80% !important;
-padding:20px 0px;
+padding:50px 0px;
 }
 
